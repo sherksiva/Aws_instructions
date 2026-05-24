@@ -1,0 +1,44 @@
+In IT, "CRX" typically refers to a packaged Google Chrome/Chromium Browser Extension or an Adobe Experience Manager (AEM) content package. Deployment varies drastically depending on which technology stack you are targeting. 
+
+Jenkins
+
+1. Deploying a Chrome/Edge Extension (CRX)
+Deploying .crx files is common when sideloading internal enterprise tools. For testing or single-user instances, it can be done manually, but enterprise IT deploys these centrally. 
+
+Stack Overflow
+ 
+Manual Sideloading (Testing/Local)
+Launch your Chromium-based browser (Chrome or Edge).
+Navigate to chrome://extensions or edge://extensions.
+Toggle on Developer mode in the top right.
+Drag and drop the .crx file directly into the extensions page. 
+
+Oracle Help Center
+ 
+Enterprise Deployment (Group Policy / MDM)
+To push extensions to all workstations without forcing users to use the Chrome/Edge store, IT administrators use policy management tools like Group Policy Objects (GPO) or Microsoft Endpoint Manager: 
+
+Microsoft Learn
+Allowlist the extension: Add the extension's specific ID to the ExtensionInstallAllowlist policy.
+Configure auto-update: Set the ExtensionInstallSources and ExtensionInstallForceList policies, providing the update URL (or local network share path) for the .crx file.
+For detailed Microsoft Edge instructions, refer to the Microsoft Self-host Extensions Guide. 
+Command-Line/Registry Installation
+For quick script-based deployments, you can map the CRX path to the Windows Registry: 
+
+IBM
+
+Navigate to HKEY_LOCAL_MACHINE\SOFTWARE\Google\Chrome\Extensions\[Extension_ID].
+Add string values for the path (e.g., a network share location) and version. 
+
+Chromium
+For a visual breakdown of how to convert and extract a CRX file for manual installation:
+Related video thumbnail
+2m
+How to install .CRX file in Windows, Mac, Linux and ...
+
+
+UniqueTutorials
+YouTube• 19 Dec 2023
+
+1. https://www.youtube.com/watch?v=dKI2TlcCc_Q&t=23s 
+
